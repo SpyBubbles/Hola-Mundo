@@ -1,0 +1,53 @@
+@startuml pow
+class Pow
+class Juego
+class JuegoPelota
+class JuegoCarro
+class JuegoPatineta
+class Pelota
+class Carro
+class Patineta
+class Kk
+class Medicina
+class Comida
+class Ropa
+class Higiene
+class Jabon
+class Moneda
+class Jugador
+
+'Usa...'
+Jugador o-- Pow
+Pow o-- Juego
+Pow o-- Ropa
+Pow o-- Moneda
+Pow o-- Medicina
+Pow o-- Carro
+Pow o-- Pelota
+Pow o-- Patineta
+Pow o-- Comida
+Pow o-- Jabon
+JuegoPelota o-- Pelota
+JuegoCarro o-- Carro
+JuegoPatineta o-- Patineta
+Medicina o-- Moneda
+Comida o-- Moneda
+Ropa o-- Moneda
+
+'Tiene...'
+Pow *-- Higiene
+Pow *-- Kk
+Higiene *-- Jabon
+JuegoCarro *-- Moneda
+JuegoPelota *-- Moneda
+JuegoPatineta *-- Moneda
+
+'Es un...'
+Moneda <|-- Kk
+Comida <|-- Medicina
+Juego <|-- JuegoCarro
+Juego <|--JuegoPelota
+Juego <|--JuegoPatineta
+Higiene <|-- Moneda
+
+@enduml
