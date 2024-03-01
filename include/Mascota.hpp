@@ -15,13 +15,12 @@ public:
         vida += alimento.ExtraerEnergia();
 
     }
+    void Jugar(){
+        this->vida -= 2;
+    }
+    int LeerVida(){
+        return this->vida;
+    }
 };
 
-Mascota::Mascota()
-{
-}
-
-Mascota::~Mascota()
-{
-}
 

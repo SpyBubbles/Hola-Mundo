@@ -1,3 +1,4 @@
+#pragma once
 class Alimento
 {
 private:
@@ -6,7 +7,6 @@ public:
     Alimento(int energia) {
         this -> energia = energia; //scope
     }
-    ~Alimento() {}
     int ExtraerEnergia(){
         return energia;
     }
